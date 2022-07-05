@@ -38,4 +38,4 @@ if (n >= 0 && n <= 15)
 				}
 				_putchar('\n');
 		}
-print_times_table}
+print_times_table(0)}
