@@ -8,24 +8,24 @@
  */
 char *rot13(char *s)
 {
-	int i, j;
-	char r[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i, ii;
 
-	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-
-	char boolean;
+	char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		boolean = 0;
-		for (j = 0; alpha[j] != '\0' && boolean == 0; j++)
+		for (ii = 0; ii < 54; ii++)
 		{
 			if
-(s[i] == alpha[])
+(((s[i] <= 'z' && s[i] >= 'a') ||
+(s[i] <= 'Z' && s[i] >= 'A'))
+			&& s[i] == input[ii])
 				{
-					s[i] = r[j];
-					boolean = 1;
+					s[i] = output[ii];
+break;
 				}
+
 		}
 	}
 
