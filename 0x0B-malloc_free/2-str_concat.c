@@ -31,12 +31,12 @@ char *str_concat(char *s1, char *s2)
 	char *conc, *tmp;
 
 	if (!s1)
-		s1 = " ";
+		s1 = "";
 	else
 		l1 = _strlen(s1);
 
 	if (!s2)
-		s2 = " ";
+		s2 = "";
 	else
 		l2 = _strlen(s2);
 
